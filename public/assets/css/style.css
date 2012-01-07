@@ -1,3 +1,12 @@
 body.loading {
     display: none;
 }
+
+form .form-field-wrapper {
+    position: relative;
+}
+form .form-field-wrapper input + a[data-role="button"] {
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+}

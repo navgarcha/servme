@@ -20,31 +20,66 @@
         </script>
     </head> 
     <body class="loading"> 
-        <div data-role="page" data-theme="b">
-            <div data-role="header" data-theme="b">
+        <div id="page-home" data-role="page" data-theme="c">
+            <div data-role="header" data-theme="b" data-position="fixed">
         		<h1>ServMe</h1>
-                <a href="login.html" class="ui-btn-right" data-icon="arrow-r">Login</a>
+                <a href="#page-login" class="ui-btn-right" data-icon="arrow-r">Login</a>
         	</div>
         
-        	<div data-role="content" data-theme="c">	
-                <form id="form-login" action="#" method="get">
-                    <div data-role="fieldcontain" class="ui-hide-label">
-                        <label for="form-login-user">Username:</label>
-                        <input type="text" name="user" id="form-login-user" value="" placeholder="Username"  />
+        	<div data-role="content">	
+                <form id="form-signup" action="#" method="get">
+                    <div data-role="fieldcontain">
+                        <div class="form-field-wrapper">
+                            <label for="form-signup-user">Username:</label>
+                            <input type="text" name="user" id="form-signup-user" value="" />
+                        </div>
+                        <div class="form-field-wrapper">
+                            <label for="form-signup-email">Email:</label>
+                            <input type="email" name="email" id="form-signup-email" value="" />
+                        </div>
+                        <div class="form-field-wrapper">
+                            <label for="form-signup-password">Password:</label>
+                            <input type="password" name="password" id="form-signup-password" value="" />
+                        </div>
+                        <div class="form-field-wrapper">
+                            <label for="form-signup-location">Location:</label>
+                            <input type="text" name="location" id="form-signup-location" value="" data-icon="search" />
+                            <a href="location_finder.html" data-rel="dialog" data-transition="slidedown" data-role="button" data-icon="search" data-iconpos="notext">Location Finder</a>
+                        </div>
                     </div>    
-                    <div data-role="fieldcontain" class="ui-hide-label">
-                        <label for="form-login-password">Password:</label>
-                        <input type="password" name="password" id="form-login-password" value="" placeholder="Password" />
-                    </div> 
-
-                    <div class="ui-grid-a">
-                        <div class="ui-block-a"><button type="submit" data-theme="b">Signup</button></div>
-                    	<div class="ui-block-b"> <button type="submit">Cancel</button></div>
-                    </div>
+                    
+                    <button type="submit" data-theme="b">Signup</button>
+                    <button type="reset">Reset</button>
                 </form>
         	</div>
             
-            <div data-role="footer">    	
+            <div data-role="footer" data-theme="a" data-position="fixed">    	
+            	<div data-role="navbar">
+            		<ul>
+                        <li><a href="#" data-icon="star">Latest</a></li>
+            			<li><a href="#" data-icon="grid">Listings</a></li>
+            			<li><a href="#" data-icon="search">Search</a></li>
+            			<li><a href="#" data-icon="gear">Settings</a></li>
+            		</ul>
+            	</div>
+            </div>
+        </div>
+        
+        <div id="page-login" data-role="page" data-add-back-btn="true">
+            <div data-role="header" data-theme="b" data-position="fixed">
+            	<h1>ServMe</h1>
+        	</div>
+        
+        	<div data-role="content">	
+        		<form id="form-login" action="#" method="get">
+                    <input type="text" name="user" id="form-login-user" value="" placeholder="Username"  />
+                    <input type="password" name="password" id="form-login-password" value="" placeholder="Password" />
+ 
+                    <button type="submit" data-theme="b">Login</button>
+                </form>
+        	</div>
+        
+        	<div data-role="footer" data-theme="a" data-position="fixed">        
             	<div data-role="navbar">
             		<ul>
                         <li><a href="#" data-icon="star">Latest</a></li>
