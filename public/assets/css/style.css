@@ -2,6 +2,11 @@ body.loading {
     display: none;
 }
 
+/** OVERWRITES **/
+div[data-role="dialog"] .ui-header .ui-title {
+    white-space: normal;
+}
+
 /** CONTENT STYLES **/
 div[data-role="content"] .feature-welcome .logo {
     background: url('../imgs/logo-large.png') no-repeat right center transparent;
@@ -13,11 +18,12 @@ div[data-role="content"] .feature-welcome h2 {
     margin: 2px 0 0 8px;
 }
 div[data-role="content"] .feature-welcome h3 {
-    color: #777;
+    color: #333;
+    font-weight: normal;
     font-size: 13px;
     line-height: 11px;
     margin: 0 0 0 8px;
-    max-width: 145px;
+    max-width: 125px;
 }
 
 form .form-field-wrapper {
