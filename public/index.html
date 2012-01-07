@@ -20,14 +20,40 @@
         </script>
     </head> 
     <body class="loading"> 
-        <div data-role="page">
-            <div data-role="header">
+        <div data-role="page" data-theme="b">
+            <div data-role="header" data-theme="b">
         		<h1>ServMe</h1>
+                <a href="login.html" class="ui-btn-right" data-icon="arrow-r">Login</a>
         	</div>
         
-        	<div data-role="content">	
-        		<p>Hello world!</p>		
+        	<div data-role="content" data-theme="c">	
+                <form id="form-login" action="#" method="get">
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="form-login-user">Username:</label>
+                        <input type="text" name="user" id="form-login-user" value="" placeholder="Username"  />
+                    </div>    
+                    <div data-role="fieldcontain" class="ui-hide-label">
+                        <label for="form-login-password">Password:</label>
+                        <input type="password" name="password" id="form-login-password" value="" placeholder="Password" />
+                    </div> 
+
+                    <div class="ui-grid-a">
+                        <div class="ui-block-a"><button type="submit" data-theme="b">Signup</button></div>
+                    	<div class="ui-block-b"> <button type="submit">Cancel</button></div>
+                    </div>
+                </form>
         	</div>
+            
+            <div data-role="footer">    	
+            	<div data-role="navbar">
+            		<ul>
+                        <li><a href="#" data-icon="star">Latest</a></li>
+            			<li><a href="#" data-icon="grid">Listings</a></li>
+            			<li><a href="#" data-icon="search">Search</a></li>
+            			<li><a href="#" data-icon="gear">Settings</a></li>
+            		</ul>
+            	</div>
+            </div>
         </div>
         
         <script>
