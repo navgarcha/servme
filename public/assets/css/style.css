@@ -3,21 +3,24 @@ body.loading {
 }
 
 /** OVERWRITES **/
-div[data-role="dialog"] .ui-header .ui-title {
-    white-space: normal;
+.ui-header .ui-title { 
+    white-space: normal;    /* Stop ellipsis in dialog headers */
 }
 
 /** CONTENT STYLES **/
-div[data-role="content"] .feature-welcome .logo {
+.feature-slot .logo {
     background: url('../imgs/logo-large.png') no-repeat right center transparent;
     height: 59px;
 }
-div[data-role="content"] .feature-welcome h2 {
+.feature-slot .logo.center {
+    background-position: center center;
+}
+.feature-slot.feature-welcome h2 {
     color: #082E6B;
     font-size: 16px;
     margin: 2px 0 0 8px;
 }
-div[data-role="content"] .feature-welcome h3 {
+.feature-slot.feature-welcome h3 {
     color: #333;
     font-weight: normal;
     font-size: 13px;
@@ -26,11 +29,8 @@ div[data-role="content"] .feature-welcome h3 {
     max-width: 125px;
 }
 
-form .form-field-wrapper {
-    position: relative;
-}
-form .form-field-wrapper input + a[data-role="button"] {
-    position: absolute;
-    right: 0;
-    bottom: -3px;
+/** FORM ELEMENTS **/
+form .ui-field-contain label > .label-button {
+    float: right;
+    margin-top: -3px;
 }
