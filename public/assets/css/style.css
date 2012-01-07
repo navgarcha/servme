@@ -2,6 +2,24 @@ body.loading {
     display: none;
 }
 
+/** CONTENT STYLES **/
+div[data-role="content"] .feature-welcome .logo {
+    background: url('../imgs/logo-large.png') no-repeat right center transparent;
+    height: 59px;
+}
+div[data-role="content"] .feature-welcome h2 {
+    color: #082E6B;
+    font-size: 16px;
+    margin: 2px 0 0 8px;
+}
+div[data-role="content"] .feature-welcome h3 {
+    color: #777;
+    font-size: 13px;
+    line-height: 11px;
+    margin: 0 0 0 8px;
+    max-width: 145px;
+}
+
 form .form-field-wrapper {
     position: relative;
 }
